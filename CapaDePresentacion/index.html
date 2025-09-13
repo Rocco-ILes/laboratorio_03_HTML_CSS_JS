@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller de Personas y Cuentas</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+</head>
+
+<body>
+    <!-- Formularios de registro -->
+    <h2>Registrar Empresa</h2>
+    <form id="formEmpresa">
+        <input type="text" id="nombreEmpresa" placeholder="Nombre" required />
+        <input type="text" id="direccion" placeholder="Direccion" required />
+        <input type="text" id="nit" placeholder="NIT" required />
+        <button type="submit">Agregar Empresa</button>
+    </form>
+
+    <h2>Registrar Personas</h2>
+    <form id="formPersona">
+        <input type="text" id="nombrePersona" placeholder="Nombre" required />
+        <input type="text" id="apellidoPersona" placeholder="Apellido" required />
+        <select id="empresaSelect">
+            <option value="" disabled selected>Empresa</option>
+        </select>
+        <button type="submit">Agregar Persona</button>
+    </form>
+
+    <h2>Registrar Cuenta</h2>
+    <form id="formCuenta">
+        <input type="text" id="numeroCuenta" placeholder="Número de Cuenta" required />
+        <input type="number" id="saldoCuenta" placeholder="Saldo Inicial" required />
+        <select id="tipo" required>
+            <option value="" disabled selected>Tipo de Cuenta</option>
+            <option value="Ahorros">Ahorros</option>
+            <option value="Corriente">Corriente</option>
+        </select>
+        <select id="personaSelect" required>
+            <option value="" disabled selected>Persona</option>
+        </select>
+        <button type="submit">Agregar Cuenta</button>
+    </form>
+    <!-- Tabla donde se muestran las cuentas  -->
+    <h2>Cuentas Registradas</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Número de Cuenta</th>
+                <th>Saldo</th>
+                <th>Tipo</th>
+                <th>Persona</th>
+                <th>Empresa</th>
+            </tr>
+        </thead>
+        <tbody id="tablaCuentas">
+            <!-- Aquí las filas de la tabla Cuentas se agregan dinámicamente -->
+        </tbody>
+    </table>
+
+    <h2><b>Estadísticas</b></h2>
+
+    <div id="estadisticas"></div>
+
+    <!-- Archivos JS -->
+    <!-- 1. Entidades -->
+
+    <script src="../capaDeAccesoADatos/Entidades/Empresa.js"></script>
+    <script src="../capaDeAccesoADatos/Entidades/Persona.js"></script>
+    <script src="../capaDeAccesoADatos/Entidades/Cuenta.js"></script>
+
+    <!-- 2. Repositorios -->
+    <script src="../capaDeAccesoADatos/Repositorios/empresaRepository.js"></script>
+    <script src="../capaDeAccesoADatos/Repositorios/personaRepository.js"></script>
+    <script src="../capaDeAccesoADatos/Repositorios/cuentaRepository.js"></script>
+
+    <!-- 3. Servicios-->
+    <script src="../CapaFachadaDeServicios/gestionarEmpresasServices.js"></script>
+    <script src="../CapaFachadaDeServicios/gestionarPersonasServices.js"></script>
+    <script src="../CapaFachadaDeServicios/gestionarCuentasServices.js"></script>
+
+    <!-- 4. Vista (estos sí están en la misma carpeta de index.html) -->
+    <script src="logicaEmpresa.js"></script>
+    <script src="logicaPersona.js"></script>
+    <script src="logicaCuenta.js"></script>
+    <script src="logicaEstadistica.js"></script>
+</body>
+
+</html>

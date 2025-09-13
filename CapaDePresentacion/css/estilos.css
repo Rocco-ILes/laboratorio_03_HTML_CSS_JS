@@ -1,0 +1,97 @@
+/* ESTILOS GENERALES */
+
+body{
+    font-family: Arial, Helvetica, sans-serif; /* Fuente legible */
+    background-color: #f5f6fa; /* azul palido-fondo suave */
+    margin: 20px;
+    color:#2f3640; /* texto gris oscuro */
+
+}
+
+/* TITULOS PRINCIPALES */
+
+h2 {
+    color: #273c75; /* azul fuerte */
+    border-bottom: 2 px solid #40739e; /* Línea azul moderada para decorar */
+    padding-bottom: 5px;
+    margin-top: 30px;
+}
+
+/* CAMPOS ENTRADA FORMULARIOS */
+
+form input, form select {
+    width: 95%; /* Para que ocupen casi todo el ancho*/
+    padding:8px;
+    margin: 8px;
+    border-radius: 5px;
+}
+
+/* BOTONES */
+
+form button {
+    background-color: #FF5733;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer; /* Manito */
+    transition: 0.3s ; /* Transicion, animación suave 3 seg.*/
+}
+ 
+form button:hover{
+    background-color:#FFA500; /* Naranja más claro al pasar el mouse */
+}
+
+/* TABLA DE CUENTAS */
+
+table{
+    width: 100%;
+    border-collapse: collapse; /*Quita doble borde*/
+    margin-top: 10px;
+    background: white;
+    box-shadow: 2px 2 px 5 px rgba(0, 0, 0,0.1);
+}
+
+table th{
+    background-color: #00CCFF;
+    color: white;
+    padding: 10px;
+}
+
+table td{
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #dcdde1
+}
+
+table tr:nth-child(even){
+    background-color: #f1f2f6; /*Alterna colores*/
+}
+
+/* ESTADÍSTICAS */
+
+#estadisticas{
+    background: #FFFFFF;
+    padding: 15px;
+    border: 1px solid #dcdde1;
+    border-radius: 8px;
+    margin-top: 15px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0,0.1); /*Agrega sombra a un elemento en CSS*/
+}
+
+/* CADA ESTADÍSTICA*/
+
+#estadisticas div{
+    background: #f1f2f6;
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #2d3436;
+    transition: 0.3s;
+}
+
+/* EFECTO AL PASAR EL MOUSE SOBRE LA ESTADISTICA*/
+#estadisticas div:hover{
+    background: #dcdde1;
+}
